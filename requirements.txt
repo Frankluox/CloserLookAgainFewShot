@@ -1,0 +1,12 @@
+absl_py==1.2.0
+numpy
+Pillow==9.5.0
+PyYAML==6.0
+qpth==0.0.15
+scikit_learn==0.24.2
+scipy==1.9.1
+termcolor==2.3.0
+timm==0.6.12
+torch>=1.4.0
+yacs==0.1.8
+tensorboardX

@@ -1,0 +1,50 @@
+AUG:
+  MEAN:
+  - 0.4712
+  - 0.4499
+  - 0.4031
+  STD:
+  - 0.2726
+  - 0.2634
+  - 0.2794
+  TEST_CROP: true
+DATA:
+  IMG_SIZE: 84
+  NUM_WORKERS: 8
+  PATH_TO_IS_A: /home/luoxu/data/wordnet.is_a.txt
+  PATH_TO_NUM_LEAF_IMAGES: data/ImageNet_num_images_perclass.json
+  PATH_TO_WORDS: /home/luoxu/data/words.txt
+  TEST:
+    BATCH_SIZE: 8
+    DATASET_NAMES:
+    - Traffic Signs
+    DATASET_ROOTS:
+    - ../data/traffic
+    EPISODE_DESCR_CONFIG:
+      MAX_NUM_QUERY: 15
+      MIN_EXAMPLES_IN_CLASS: 16
+      NUM_QUERY: 15
+      NUM_SUPPORT: 1
+      NUM_TASKS_PER_EPOCH: 2000
+      NUM_WAYS: 5
+      SEQUENTIAL_SAMPLING: 1
+      USE_BILEVEL_HIERARCHY: false
+      USE_DAG_HIERARCHY: false
+GPU_ID: 2
+IS_TRAIN: 0
+MODEL:
+  BACKBONE: resnet12
+  CLASSIFIER: finetune
+  CLASSIFIER_PARAMETERS:
+  - 100
+  - 100
+  - 10
+  - 0.02
+  - 0.1
+  - false
+  - false
+  - fc
+  NAME: evaluation
+  PRETRAINED: ../pretrained_models/ce_miniImageNet_res12.ckpt
+  TYPE: fewshot_finetune
+OUTPUT: ../new_metadataset_result

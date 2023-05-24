@@ -1,0 +1,62 @@
+AUG:
+  MEAN:
+  - 0.4712
+  - 0.4499
+  - 0.4031
+  STD:
+  - 0.2726
+  - 0.2634
+  - 0.2794
+  TEST_CROP: true
+DATA:
+  IMG_SIZE: 84
+  NUM_WORKERS: 8
+  PATH_TO_IS_A: /home/luoxu/data/wordnet.is_a.txt
+  PATH_TO_NUM_LEAF_IMAGES: data/ImageNet_num_images_perclass.json
+  PATH_TO_WORDS: /home/luoxu/data/words.txt
+  VALID:
+    BATCH_SIZE: 8
+    DATASET_NAMES:
+    - Quick Draw
+    DATASET_ROOTS:
+    - ../data/all_datasets/domainnet/quickdraw
+    EPISODE_DESCR_CONFIG:
+      MAX_NUM_QUERY: 15
+      MIN_EXAMPLES_IN_CLASS: 20
+      NUM_QUERY: 15
+      NUM_SUPPORT: 5
+      NUM_TASKS_PER_EPOCH: 50
+      NUM_WAYS: 5
+      SEQUENTIAL_SAMPLING: 1
+      USE_DAG_HIERARCHY: false
+GPU_ID: 2
+IS_TRAIN: 0
+MODEL:
+  BACKBONE: resnet12
+  CLASSIFIER: finetune
+  CLASSIFIER_PARAMETERS:
+  - 100
+  - 100
+  - null
+  - null
+  - null
+  - false
+  - false
+  - fc
+  NAME: evaluation
+  PRETRAINED: ../pretrained_models/ce_miniImageNet_res12.ckpt
+  TYPE: fewshot_finetune
+OUTPUT: ../new_metadataset_result
+SEARCH_HYPERPARAMETERS:
+  EPOCH_RANGE:
+  - 10
+  - 20
+  - 30
+  LR_BACKBONE_RANGE:
+  - 0.01
+  - 0.05
+  - 0.25
+  LR_HEAD_RANGE:
+  - 0.02
+  - 0.1
+  - 0.5

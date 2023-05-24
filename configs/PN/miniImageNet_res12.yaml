@@ -1,0 +1,53 @@
+AUG:
+  MEAN:
+  - 0.4712
+  - 0.4499
+  - 0.4031
+  STD:
+  - 0.2726
+  - 0.2634
+  - 0.2794
+DATA:
+  IMG_SIZE: 84
+  NUM_WORKERS: 8
+  PATH_TO_IS_A: /home/luoxu/data/wordnet.is_a.txt
+  PATH_TO_NUM_LEAF_IMAGES: data/ImageNet_num_images_perclass.json
+  PATH_TO_WORDS: /home/luoxu/data/words.txt
+  TRAIN:
+    BATCH_SIZE: 2
+    DATASET_NAMES:
+    - miniImageNet
+    DATASET_ROOTS:
+    - /home/wuhao/data/mini_imagenet/images_imagefolder
+    EPISODE_DESCR_CONFIG:
+      MIN_EXAMPLES_IN_CLASS: 20
+      NUM_QUERY: 15
+      NUM_SUPPORT: 5
+      NUM_TASKS_PER_EPOCH: 1000
+      NUM_WAYS: 5
+      USE_DAG_HIERARCHY: false
+    IS_EPISODIC: true
+  VALID:
+    BATCH_SIZE: 8
+    DATASET_NAMES:
+    - miniImageNet
+    DATASET_ROOTS:
+    - /home/wuhao/data/mini_imagenet/images_imagefolder
+    EPISODE_DESCR_CONFIG:
+      MAX_NUM_QUERY: 15
+      MIN_EXAMPLES_IN_CLASS: 20
+      NUM_QUERY: 15
+      NUM_SUPPORT: 5
+      NUM_TASKS_PER_EPOCH: 600
+      NUM_WAYS: 5
+      USE_DAG_HIERARCHY: false
+GPU_ID: 2
+MODEL:
+  BACKBONE: resnet12
+  CLASSIFIER: proto_head
+  NAME: miniImageNet_Res12_PN
+  TYPE: Episodic_Model
+OUTPUT: ../new_metadataset_result
+TRAIN:
+  BASE_LR: 0.05
+  EPOCHS: 60
