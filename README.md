@@ -1,6 +1,6 @@
 # Pure Pytorch Meta-Dataset
 
-This repository contains Pytorch implementation of Meta-Dataset without any component of TensorFlow, as well as implementation of our ICML 2023 paper: A Closer Look at Few-shot Classification Again. Some features of our implementation:
+This repository contains Pytorch implementation of Meta-Dataset without any component of TensorFlow, as well as implementation of our ICML 2023 paper: [A Closer Look at Few-shot Classification Again](https://arxiv.org/abs/2301.12246). Some features of our implementation:
 
 1.  Unlike original Meta-Dataset, No dataset conversion to TFrecord is needed; instead we use raw images. This is beneficial for anyone who wants to inspect the dataset manually. 
 2.  Unlike other versions of pytorch implementations of Meta-Dataset, we support multi-dataset training for both episodic/non-episodic methods.
