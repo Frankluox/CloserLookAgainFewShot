@@ -25,7 +25,7 @@ All pre-trained models of Table 1 in the ICML 2023 paper can be found at [here](
 
 # Dataset Preparation
 First, download all datasets of Meta-Dataset.
-- ILSVRC 2012: 
+## ILSVRC 2012
 1. Download `ilsvrc2012_img_train.tar`, from the [ILSVRC2012 website](http://www.image-net.org/challenges/LSVRC/2012/index)
 2. Extract it into `ILSVRC2012_img_train/`, which should contain 1000 files, named `n????????.tar`
 3. Extract each of `ILSVRC2012_img_train/n????????.tar` in its own directory
@@ -41,7 +41,7 @@ First, download all datasets of Meta-Dataset.
     done
     ```
 
-- Omniglot: 
+## Omniglot
 
 1. Download
     [`images_background.zip`](https://github.com/brendenlake/omniglot/raw/master/python/images_background.zip)
@@ -57,7 +57,7 @@ First, download all datasets of Meta-Dataset.
     ```
     where `omniglot_source_path` refers to the directory of raw dataset, and `omniglot_target_path` refers to the directory of new converted dataset.
 
-- Aircraft: 
+## Aircraft
 
 1. Download [`fgvc-aircraft-2013b.tar.gz`](http://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/archives/fgvc-aircraft-2013b.tar.gz) and extract it into a directory.
 2. Launch the conversion script:
@@ -72,10 +72,10 @@ First, download all datasets of Meta-Dataset.
 - CUB: Download
     [`CUB_200_2011.tgz`](http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz) and extract it.
 
-- DTD: Download
-    [`dtd-r1.0.1.tar.gz`](https://www.robots.ox.ac.uk/~vgg/data/dtd/download/dtd-r1.0.1.tar.gz) and extract it.
+## DTD 
+Download [`dtd-r1.0.1.tar.gz`](https://www.robots.ox.ac.uk/~vgg/data/dtd/download/dtd-r1.0.1.tar.gz) and extract it.
 
-- Quick Draw: 
+## Quick Draw
 
 1. Download all 345 `.npy` files hosted on
     [Google Cloud](https://console.cloud.google.com/storage/quickdraw_dataset/full/numpy_bitmap). You can use
@@ -94,23 +94,22 @@ First, download all datasets of Meta-Dataset.
     ```
     where `quickdraw_source_path` refers to the directory of raw dataset, and `quickdraw_target_path` refers to the directory of new converted dataset.
 
-- Fungi: Download
-    [`fungi_train_val.tgz`](https://labs.gbif.org/fgvcx/2018/fungi_train_val.tgz)
+## Fungi 
+Download [`fungi_train_val.tgz`](https://labs.gbif.org/fgvcx/2018/fungi_train_val.tgz)
     and
     [`train_val_annotations.tgz`](https://labs.gbif.org/fgvcx/2018/train_val_annotations.tgz), then extract them into the same directory. It should contain one
     `images/` directory, as well as `train.json` and `val.json`.
 
-- VGG Flower: Download
-    [`102flowers.tgz`](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/102flowers.tgz)
+## VGG Flower
+Download [`102flowers.tgz`](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/102flowers.tgz)
     and
     [`imagelabels.mat`](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/imagelabels.mat), then extract `102flowers.tgz`, it will create a `jpg/` sub-directory
 
-- Traffic Signs: 
+## Traffic Signs
 
 1. Download
     [`GTSRB_Final_Training_Images.zip`](https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/GTSRB_Final_Training_Images.zip)
     If the link happens to be broken, browse the GTSRB dataset [website](http://benchmark.ini.rub.de) for more information. Then extract it, which will create a `GTSRB/` sub-directory.
-
 2.  Launch the conversion script:
     ```bash
     python -m prepare_datasets.py \
@@ -120,7 +119,7 @@ First, download all datasets of Meta-Dataset.
     ```
     where `traffic_source_path` refers to the directory of raw dataset, and `traffic_target_path` refers to the directory of new converted dataset.
 
-- MSCOCO:
+## MSCOCO
 
 1. Download [`train2017.zip`](http://images.cocodataset.org/zips/train2017.zip) and
         [`annotations_trainval2017.zip`](http://images.cocodataset.org/annotations/annotations_trainval2017.zip)
@@ -134,7 +133,7 @@ First, download all datasets of Meta-Dataset.
     ```
     where `coco_source_path` refers to the directory of raw dataset, and `coco_target_path` refers to the directory of new converted dataset.
 
-- MNIST:
+## MNIST:
 
 1. Download [`t10k-images-idx3-ubyte.gz`](http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz) and [`t10k-labels-idx1-ubyte.gz`](http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz) into the same directory. 
 2. Launch the conversion script:
@@ -146,7 +145,7 @@ First, download all datasets of Meta-Dataset.
     ```
     where `mnist_source_path` refers to the directory of raw dataset, and `mnist_target_path` refers to the directory of new converted dataset.
 
-- CIFAR10: 
+## CIFAR10: 
 
 1. Download [`cifar-10-python.tar.gz`](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz) and extract it.
 2. Launch the conversion script:
@@ -158,7 +157,7 @@ First, download all datasets of Meta-Dataset.
     ```
     where `cifar10_source_path` refers to the directory of raw dataset, and `cifar10_target_path` refers to the directory of new converted dataset.
 
-- CIFAR100:
+## CIFAR100:
 
 1. Download [`cifar-100-python.tar.gz`](https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz) and extract it.
 2. Launch the conversion script:
@@ -170,7 +169,8 @@ First, download all datasets of Meta-Dataset.
     ```
     where `cifar100_source_path` refers to the directory of raw dataset, and `cifar100_target_path` refers to the directory of new converted dataset.
 
-- miniImageNet (not included in Meta-Dataset): Download [miniImageNet.zip](https://drive.google.com/file/d/1QEbHFIOKIM9KmId175QaLK-r22kgd7br/view?usp=share_link).
+## miniImageNet (not included in Meta-Dataset)
+Download [miniImageNet.zip](https://drive.google.com/file/d/1QEbHFIOKIM9KmId175QaLK-r22kgd7br/view?usp=share_link).
 
 # Training and Testing
 
