@@ -29,9 +29,9 @@ _C.DATA.IMG_SIZE = 224
 
 
 # ImageNet settings
-_C.DATA.PATH_TO_WORDS = ""
-_C.DATA.PATH_TO_IS_A = ""
-_C.DATA.PATH_TO_NUM_LEAF_IMAGES = ""
+_C.DATA.PATH_TO_WORDS = "data/words.txt"
+_C.DATA.PATH_TO_IS_A = "data/wordnet.is_a.txt"
+_C.DATA.PATH_TO_NUM_LEAF_IMAGES = "data/ImageNet_num_images_perclass.json"
 _C.DATA.TRAIN_SPLIT_ONLY = False
 
 _C.DATA.TRAIN = CN()

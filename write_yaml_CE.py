@@ -4,17 +4,11 @@ import os
 Data = {}
 Data["DATA"] = {}
 
-Data["DATA"]["PATH_TO_WORDS"] = "/home/luoxu/data/words.txt"
-Data["DATA"]["PATH_TO_IS_A"] = "/home/luoxu/data/wordnet.is_a.txt"
-Data["DATA"]["PATH_TO_NUM_LEAF_IMAGES"] = "data/ImageNet_num_images_perclass.json"
 
 Data["DATA"]["TRAIN"] = {}
 
-Data["DATA"]["TRAIN"]["DATASET_ROOTS"] = ["/home/wuhao/data/mini_imagenet/images_imagefolder"]
+Data["DATA"]["TRAIN"]["DATASET_ROOTS"] = ["PATH-TO-miniIMAGENET"]
 Data["DATA"]["TRAIN"]["DATASET_NAMES"] = ["miniImageNet"]
-
-# Data["DATA"]["TRAIN"]["DATASET_ROOTS"] = ["PATH-TO-miniIMAGENET"]
-# Data["DATA"]["TRAIN"]["DATASET_NAMES"] = ["miniImageNet"]
 
 Data["DATA"]["TRAIN"]["IS_EPISODIC"] = False
 
@@ -26,12 +20,8 @@ Data["DATA"]["VALID"] = {}
 
 
 
-
-Data["DATA"]["VALID"]["DATASET_ROOTS"] = ["/home/wuhao/data/mini_imagenet/images_imagefolder"]
+Data["DATA"]["VALID"]["DATASET_ROOTS"] = ["PATH-TO-miniIMAGENET"]
 Data["DATA"]["VALID"]["DATASET_NAMES"] = ["miniImageNet"]
-
-# Data["DATA"]["TRAIN"]["DATASET_ROOTS"] = ["PATH-TO-miniIMAGENET"]
-# Data["DATA"]["TRAIN"]["DATASET_NAMES"] = ["miniImageNet"]
 
 
 

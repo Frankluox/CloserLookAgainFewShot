@@ -2,28 +2,25 @@ import yaml
 import os
 
 all_roots = {}
-all_roots["ILSVRC"] = "/home/wuhao/data/imagenet/train" #0
-all_roots["Omniglot"] = "../data/all_datasets/new_omniglot" #1
-all_roots["Quick Draw"] = "../data/all_datasets/domainnet/quickdraw" #2
-all_roots["Birds"] = "../data/all_datasets/CUB_200_2011" #3
-all_roots["VGG Flower"] = "../data/all_datasets/vggflowers" #4
-all_roots["Aircraft"] = "../data/all_datasets/aircraft"  #5
-all_roots["Traffic Signs"] = "../data/traffic" #6
-all_roots["MSCOCO"] = "../data/coco" #7
-all_roots["Textures"] = "../data/all_datasets/dtd" #8
-all_roots["Fungi"] = "../data/all_datasets/fungi" #9
-all_roots["MNIST"] = "../data/all_datasets/mnist" #10
-all_roots["CIFAR10"] = "../data/all_datasets/cifar10" #11
-all_roots["CIFAR100"] = "../data/all_datasets/cifar100" #12
-all_roots["miniImageNet"] = "/home/wuhao/data/mini_imagenet/images_imagefolder" #13
+all_roots["ILSVRC"] = "PATH-TO-IMAGENET" #0
+all_roots["Omniglot"] = "PATH-TO-omniglot" #1
+all_roots["Quick Draw"] = "PATH-TO-quickdraw" #2
+all_roots["Birds"] = "PATH-TO-CUB" #3
+all_roots["VGG Flower"] = "PATH-TO-vggflower" #4
+all_roots["Aircraft"] = "PATH-TO-aircraft"  #5
+all_roots["Traffic Signs"] = "PATH-TO-traffic" #6
+all_roots["MSCOCO"] = "PATH-TO-coco" #7
+all_roots["Textures"] = "PATH-TO-dtd" #8
+all_roots["Fungi"] = "PATH-TO-fungi" #9
+all_roots["MNIST"] = "PATH-TO-mnist" #10
+all_roots["CIFAR10"] = "PATH-TO-cifar10" #11
+all_roots["CIFAR100"] = "PATH-TO-cifar100" #12
+all_roots["miniImageNet"] = "PATH-TO-miniImageNet" #13
 
 Data = {}
 
 Data["DATA"] = {}
 
-Data["DATA"]["PATH_TO_WORDS"] = "/home/luoxu/data/words.txt"
-Data["DATA"]["PATH_TO_IS_A"] = "/home/luoxu/data/wordnet.is_a.txt"
-Data["DATA"]["PATH_TO_NUM_LEAF_IMAGES"] = "data/ImageNet_num_images_perclass.json"
 
 Data["IS_TRAIN"] = 0
 
@@ -94,7 +91,7 @@ Data["MODEL"]["BACKBONE"] = 'resnet12'
 # Data["MODEL"]["BACKBONE"] = 'resnet50'
 # Data["MODEL"]["BACKBONE"] = 'clip'
 
-Data["MODEL"]["PRETRAINED"] = '../pretrained_models/ce_miniImageNet_res12.ckpt'
+Data["MODEL"]["PRETRAINED"] = '../pretrained_models/ce_miniImageNet_res12.ckpt'# for example
 
 Data["DATA"]["NUM_WORKERS"] = 8
 

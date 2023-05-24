@@ -2,7 +2,7 @@
 
 This repository contains Pytorch implementation of [Meta-Dataset](https://github.com/google-research/meta-dataset) without any component of TensorFlow, as well as implementation of our ICML 2023 paper: [A Closer Look at Few-shot Classification Again](https://arxiv.org/abs/2301.12246). Some features of our implementation:
 
-1.  Unlike original Meta-Dataset, No dataset conversion to TFrecord is needed; instead we use raw images. This is beneficial for anyone who wants to inspect the dataset manually. 
+1.  Unlike original Meta-Dataset, no dataset conversion to TFrecord is needed; instead we use raw images. This is beneficial for anyone who wants to inspect the dataset manually. 
 2.  Unlike other versions of pytorch implementations of Meta-Dataset, we support multi-dataset training for both episodic/non-episodic methods.
 3.  We completely fix the data shuffling problem arised in the original tensorflow implementation of Meta-Dataset (see [issue #54](https://github.com/google-research/meta-dataset/issues/54)), which strongly influences the evaluation results of ILSVRC, Aircraft, Traffic Signs, MSCOCO and Fungi. We solve this problem by randomly selecting data from all images in every episode, which cannot be done easily using the original Meta-Dataset implementation.
 
@@ -21,10 +21,10 @@ $ pip install git+https://github.com/openai/CLIP.git
 ```
 
 # Pre-trained Models
-All pre-trained models of Table 1 in the ICML 2023 paper can be found at [here](https://drive.google.com/drive/folders/18XhJxBFP_A2SDf7aSKtU-mpyvVhOTczW).
+All pre-trained models of Table 1 in the ICML 2023 paper can be found [here](https://drive.google.com/drive/folders/18XhJxBFP_A2SDf7aSKtU-mpyvVhOTczW).
 
 # Dataset Preparation
-Download all datasets of Meta-Dataset and convert some of them (due to image file forms, change of color or usage of bounding boxes).
+Download all datasets of Meta-Dataset and convert some of them (due to change of image file forms, change of color or usage of bounding boxes).
 ## ILSVRC 2012
 1. Download `ilsvrc2012_img_train.tar`, from the [ILSVRC2012 website](http://www.image-net.org/challenges/LSVRC/2012/index)
 2. Extract it into `ILSVRC2012_img_train/`, which should contain 1000 files, named `n????????.tar`
@@ -69,7 +69,7 @@ Download all datasets of Meta-Dataset and convert some of them (due to image fil
     ```
   where `aircraft_source_path` refers to the directory of raw dataset, and `aircraft_target_path` refers to the directory of new converted dataset.
 
-- CUB: Download
+## CUB: Download
     [`CUB_200_2011.tgz`](http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz) and extract it.
 
 ## DTD 
@@ -78,12 +78,12 @@ Download [`dtd-r1.0.1.tar.gz`](https://www.robots.ox.ac.uk/~vgg/data/dtd/downloa
 ## Quick Draw
 
 1. Download all 345 `.npy` files hosted on
-    [Google Cloud](https://console.cloud.google.com/storage/quickdraw_dataset/full/numpy_bitmap). You can use
+    [Google Cloud](https://console.cloud.google.com/storage/quickdraw_dataset/full/numpy_bitmap) into the same directory. You can use
         [`gsutil`](https://cloud.google.com/storage/docs/gsutil_install#install)
-        to download them to `quickdraw/`:
+        to download them:
 
         ```bash
-        gsutil -m cp gs://quickdraw_dataset/full/numpy_bitmap/*.npy $DATASRC/quickdraw
+        gsutil -m cp gs://quickdraw_dataset/full/numpy_bitmap/*.npy $DATASRC/<quickdraw_source_path>
         ```
 2.  Launch the conversion script:
     ```bash
@@ -174,7 +174,7 @@ Download [miniImageNet.zip](https://drive.google.com/file/d/1QEbHFIOKIM9KmId175Q
 
 # Training and Testing
 
-Experiments are defined via [yaml](configs) files with the help of [YACS](https://github.com/rbgirshick/yacs) package, following [Swin Trasformer](https://github.com/microsoft/Swin-Transformer/blob/main). The basic configurations are defined in `config.py`, overwritten by yaml files. yaml files can be written by python files, and we give examples for training CE models, training PN models, testing a pre-trained model, and seaching for hyperparameters for finetuning methods in `write_yaml_CE.py`, `write_yaml_PN.py`, `write_yaml_test.py` and `write_yaml_search.py`, respectively. Exemplar running scripts can be found in `train.sh`.
+Experiments are defined via [yaml](configs) files with the help of [YACS](https://github.com/rbgirshick/yacs) package, following [Swin Transformer](https://github.com/microsoft/Swin-Transformer/blob/main). The basic configurations are defined in `config.py`, overwritten by yaml files. yaml files can be written by python files, and we give examples for training CE models, training PN models, testing a pre-trained model, and seaching for hyperparameters for finetuning methods in `write_yaml_CE.py`, `write_yaml_PN.py`, `write_yaml_test.py` and `write_yaml_search.py`, respectively. Exemplar running scripts can be found in `train.sh`.
 
 # Citation
 
