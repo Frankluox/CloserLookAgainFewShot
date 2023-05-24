@@ -176,5 +176,22 @@ First, download all datasets of Meta-Dataset.
 
 Experiments are defined via [yaml](configs) files with the help of [YACS](https://github.com/rbgirshick/yacs) package, following [Swin Trasformer](https://github.com/microsoft/Swin-Transformer/blob/main). The basic configurations are defined in `config.py`, overwritten by yaml files. yaml files can be written by python files, and we give examples for training CE models, training PN models, testing a pre-trained model, and seaching for hyperparameters for finetuning methods in `write_yaml_CE.py`, `write_yaml_PN.py`, `write_yaml_test.py` and `write_yaml_search.py`, respectively. Exemplar running scripts can be found in `train.sh`.
 
+# Citation
+
+If you find our work useful in your research please consider citing:
+
+```
+@inproceedings{
+Luo2023closerlook,
+title={A Closer Look at Few-shot Classification Again},
+author={Luo, Xu and Wu, Hao and Zhang, Ji and Gao, Lianli and Xu, Jing and Song, Jingkuan},
+booktitle={International Conference on Machine Learning},
+year={2023},
+}
+```
+
+## Acknowlegements
+
+Except for original Meta-Dataset repo, part of the code is from [SwinTransformer](https://github.com/microsoft/Swin-Transformer/blob/main), [DeepEMD](https://github.com/icoz69/DeepEMD), [RFS](https://github.com/WangYueFt/rfs), [LightningFSL](https://github.com/Frankluox/LightningFSL), [S2M2](https://github.com/nupurkmr9/S2M2_fewshot), [eTT](https://github.com/loadder/eTT_TMLR2022), [URL and TSA](https://github.com/VICO-UoE/URL/tree/master) and [BiT](https://github.com/google-research/big_transfer).
 
 
