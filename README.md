@@ -24,7 +24,7 @@ $ pip install git+https://github.com/openai/CLIP.git
 All pre-trained models of Table 1 in the ICML 2023 paper can be found at [here](https://drive.google.com/drive/folders/18XhJxBFP_A2SDf7aSKtU-mpyvVhOTczW).
 
 # Dataset Preparation
-First, download all datasets of Meta-Dataset.
+Download all datasets of Meta-Dataset and convert some of them (due to image file forms, change of color or usage of bounding boxes).
 ## ILSVRC 2012
 1. Download `ilsvrc2012_img_train.tar`, from the [ILSVRC2012 website](http://www.image-net.org/challenges/LSVRC/2012/index)
 2. Extract it into `ILSVRC2012_img_train/`, which should contain 1000 files, named `n????????.tar`
