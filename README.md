@@ -192,6 +192,6 @@ year={2023},
 
 ## Acknowlegements
 
-Except for original Meta-Dataset repo, part of the code is from [SwinTransformer](https://github.com/microsoft/Swin-Transformer/blob/main), [DeepEMD](https://github.com/icoz69/DeepEMD), [RFS](https://github.com/WangYueFt/rfs), [LightningFSL](https://github.com/Frankluox/LightningFSL), [S2M2](https://github.com/nupurkmr9/S2M2_fewshot), [eTT](https://github.com/loadder/eTT_TMLR2022), [URL and TSA](https://github.com/VICO-UoE/URL/tree/master) and [BiT](https://github.com/google-research/big_transfer).
+Part of the code is from [SwinTransformer](https://github.com/microsoft/Swin-Transformer/blob/main), [DeepEMD](https://github.com/icoz69/DeepEMD), [RFS](https://github.com/WangYueFt/rfs), [LightningFSL](https://github.com/Frankluox/LightningFSL), [S2M2](https://github.com/nupurkmr9/S2M2_fewshot), [eTT](https://github.com/loadder/eTT_TMLR2022), [URL and TSA](https://github.com/VICO-UoE/URL/tree/master) and [BiT](https://github.com/google-research/big_transfer).
 
 
