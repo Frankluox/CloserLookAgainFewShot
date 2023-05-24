@@ -170,7 +170,7 @@ Download [`102flowers.tgz`](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/102
     where `cifar100_source_path` refers to the directory of raw dataset, and `cifar100_target_path` refers to the directory of new converted dataset.
 
 ## miniImageNet (not included in Meta-Dataset)
-Download [miniImageNet.zip](https://drive.google.com/file/d/1QEbHFIOKIM9KmId175QaLK-r22kgd7br/view?usp=share_link).
+Download [miniImageNet.zip](https://drive.google.com/file/d/1QEbHFIOKIM9KmId175QaLK-r22kgd7br/view?usp=share_link) and extract it.
 
 # Training and Testing
 
