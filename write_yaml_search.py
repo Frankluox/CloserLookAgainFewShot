@@ -64,6 +64,10 @@ Data["AUG"]["MEAN"] = [0.4712, 0.4499, 0.4031]
 Data["AUG"]["STD"] = [0.2726, 0.2634, 0.2794]
 
 
+# ImageNet
+# Data["DATA"]["IMG_SIZE"] = 224
+
+# miniImageNet
 Data["DATA"]["IMG_SIZE"] = 84
 
 Data["MODEL"]["BACKBONE"] = 'resnet12'
@@ -76,7 +80,7 @@ Data["AUG"]["TEST_CROP"] = True
 Data["DATA"]["VALID"]["EPISODE_DESCR_CONFIG"]["NUM_TASKS_PER_EPOCH"] = 50
 
 
-# some examples of gradient-based methods. Hyperparameters need to be tuned by using search_hyperparameter.py
+# some examples of gradient-based methods.
 Data["MODEL"]["TYPE"] = "fewshot_finetune"
 Data["MODEL"]["CLASSIFIER"] = "finetune"
 # Data["MODEL"]["CLASSIFIER"] = "eTT"
