@@ -57,7 +57,7 @@ def testing(config, dataset, data_loader, model):
     acc_meter = AverageMeter()
 
     accs = []
-    dataset.set_epoch()
+    # dataset.set_epoch()
     for idx, batches in enumerate(data_loader):
         dataset_index, imgs, labels = batches
 

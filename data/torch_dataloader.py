@@ -119,6 +119,7 @@ class TorchDataset(Dataset):
 
         # all task/batches of an epoch
         self.all_tasks = []
+        self.set_epoch()
 
 
 
