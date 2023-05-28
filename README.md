@@ -69,8 +69,8 @@ Download all datasets of Meta-Dataset and convert some of them (due to change of
     ```
   where `aircraft_source_path` refers to the directory of raw dataset, and `aircraft_target_path` refers to the directory of new converted dataset.
 
-## CUB: Download
-    [`CUB_200_2011.tgz`](http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz) and extract it.
+## CUB: 
+Download [`CUB_200_2011.tgz`](http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz) and extract it.
 
 ## DTD 
 Download [`dtd-r1.0.1.tar.gz`](https://www.robots.ox.ac.uk/~vgg/data/dtd/download/dtd-r1.0.1.tar.gz) and extract it.
