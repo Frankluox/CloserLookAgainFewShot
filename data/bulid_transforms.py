@@ -10,7 +10,7 @@ def build_Torch_transform(is_train, config):
 
         if config.AUG.COLOR_JITTER is not None:
             trans.append(transforms.RandomApply([
-                    transforms.ColorJitter(config.AUG.COLOR_JITTER[:-1])  # BYOL
+                    transforms.ColorJitter(*config.AUG.COLOR_JITTER[:-1])  # BYOL
                 ], p=config.AUG.COLOR_JITTER[-1]))
         
         if config.AUG.GRAY_SCALE is not None:

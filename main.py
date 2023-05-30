@@ -108,7 +108,7 @@ def train(config):
         step = train_one_epoch(config, model, train_dataset, train_dataloader, optimizer, epoch, lr_scheduler, step, 
                              writer)
         acc_current, loss = validate(config, valid_dataset, valid_dataloader, model, epoch, writer)
-        logger.info(f"Accuracy of the network on the validated images: {acc1:.1f}%")
+        logger.info(f"Accuracy of the network on the validated images: {acc_current:.1f}%")
 
         # is current accuracy in topK?
         topK = None
