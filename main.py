@@ -91,7 +91,7 @@ def train(config):
 
     if config.MODEL.PRETRAINED:
         load_pretrained(config, model, logger)
-        acc1, loss = validate(config, valid_dataloader, model)
+        acc1, loss = validate(config, valid_dataset, valid_dataloader, model)
         logger.info(f"Accuracy of the network on the {len(valid_dataloader)} test images: {acc1:.1f}%")
 
     
